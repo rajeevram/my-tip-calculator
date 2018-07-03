@@ -1,7 +1,7 @@
 # Pre-work - Tiptron
 Tiptron is a tip calculator application for iOS.
 Submitted by: Rajeev Ram
-Time spent: 2 hour spent in total (so far)
+Time spent: 7 hours spent in total (so far)
 
 ## User Stories
 The following **required** functionality is complete:
@@ -9,14 +9,12 @@ The following **required** functionality is complete:
 
 The following **optional** features are implemented:
 (nothing yet)
-* [ ] Settings page to change the default tip percentage.
-* [ ] UI animations
-* [ ] Remembering the bill amount across app restarts (if <10mins)
-* [ ] Using locale-specific currency and currency thousands separators.
-* [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
+* [X] Settings page to change the default tip percentage; user can enter in a custom tip amount.
+* [X] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following **additional** features are implemented:
-(nothing yet)
+* [X] There are differently three differently colored themes that change the background and text.
+* [X] Launch screen when application is opened.
 
 ## Video Walkthrough 
 Here's a GIF walkthrough of implemented user stories:
@@ -24,7 +22,7 @@ Here's a GIF walkthrough of implemented user stories:
 
 
 ## Notes
-Still in the beginning stages
+This is my first project in iOS/Swift. Things that still confuse me: Optional types, Substring types are apparently different than String types. Spent a lot of time figuring out how to pass messages between views safely. Played around with the Delegation and Singleton design patterns but but neither was ideal. In the end, I decided just to pass the main view as an optional view to the secondary view, though this makes the design pretty rigid. The runtime navigation stack is helpful because it allows me to send properties backward.
 
 ## License
 
