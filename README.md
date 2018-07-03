@@ -3,7 +3,15 @@ Tiptron is a tip calculator application for iOS.
 
 Submitted by: Rajeev Ram
 
-Time spent: 8 hours spent in total (so far)
+Time spent: 12 hours total (so far) as follows
+
+2 hours: watching Swift tutorials; learning the language; practice code drills
+
+2 hours: setting up project; learning XCode; basic/required functionality completed
+
+6 hours: adding additional/optional functionality; research into Swift objects and design patterns; formatting graphics and UI; debugging and testing
+
+2 hours: comments, documentation, walkthroughs
 
 ## User Stories
 The following **required** functionality is complete:
@@ -19,7 +27,7 @@ The following **additional** features are implemented:
 * [X] Launch screen when application is opened.
 
 ## Video Walkthrough 
-Here's a GIF walkthrough of implemented user stories: <img src='https://imgur.com/a/2ajSQUQ' title='Tiptron Video Walkthrough' width='' alt='Tip Calculator Walkthrough' />
+Here's a GIF walkthrough of implemented user stories: <img src='https://imgur.com/i0guE4z.gif' title='Tiptron Video Walkthrough' width='' alt='Tip Calculator Walkthrough' />
 
 made with [LiceCap](https://www.cockos.com/licecap/)
 
