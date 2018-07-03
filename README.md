@@ -27,7 +27,9 @@ The following **additional** features are implemented:
 * [X] Launch screen when application is opened.
 
 ## Video Walkthrough 
-Here's a GIF walkthrough of implemented user stories: <img src='https://imgur.com/i0guE4z.gif' title='Tiptron Video Walkthrough' width='' alt='Tip Calculator Walkthrough' />
+Here's a GIF walkthrough of implemented user stories: 
+
+<img src='https://imgur.com/i0guE4z.gif' title='Tiptron Video Walkthrough' width='' alt='Tip Calculator Walkthrough' />
 
 made with [LiceCap](https://www.cockos.com/licecap/)
 

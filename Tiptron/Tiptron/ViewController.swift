@@ -10,6 +10,8 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    /* Properties, Initalizers, Overrides */
+    
     // UI Variables
     @IBOutlet weak var checkAmount: UITextField!
     @IBOutlet weak var tipAmount: UILabel!
@@ -35,13 +37,53 @@ class MainViewController: UIViewController {
     
     // Calibrate the proper theme and tip value from saved value, if necessary
     override func viewWillAppear(_ animated: Bool) {
+        // Ensure theme is correct
         if (themeNumber == -1) {
             themeNumber = defaults.integer(forKey: "themeNumber")
         }
         matchSelectedTheme()
+        // Ensure default percentage is correct
         setCustomPercentage(custom: defaults.integer(forKey: "customPercent"))
         calculateValues()
+        // Make number pad show up automatically
         checkAmount.becomeFirstResponder()
+    }
+    
+    /* Class Specific Methods */
+    
+    // Theme color is saved for after exit
+    func setThemeNumber(index: Int) {
+        themeNumber = index
+        defaults.set(themeNumber, forKey: "themeNumber")
+    }
+    
+    func getThemeNumber() -> Int {
+        return themeNumber
+    }
+    
+    // Change all nodes to match theme selected
+    func matchSelectedTheme() {
+        if (themeNumber == 0) { // warm color
+            background.backgroundColor = UIColor(red: 1, green: 0.87, blue: 0.74, alpha: 1)
+            tipPercentage.tintColor = UIColor(red: 1, green: 0.2, blue: 0, alpha: 1)
+            checkAmount.textColor = UIColor(red: 1, green: 0.2, blue: 0, alpha: 1)
+            tipAmount.textColor = UIColor(red: 1, green: 0.2, blue: 0, alpha: 1)
+            totalAmount.textColor = UIColor(red: 1, green: 0.2, blue: 0, alpha: 1)
+        }
+        else if (themeNumber == 1) { // cool color
+            background.backgroundColor = UIColor(red: 0.76, green: 0.98, blue: 0.85, alpha: 1)
+            tipPercentage.tintColor = UIColor(red: 0, green: 0.4, blue: 0.28, alpha: 1)
+            checkAmount.textColor = UIColor(red: 0, green: 0.4, blue: 0.28, alpha: 1)
+            tipAmount.textColor = UIColor(red: 0, green: 0.4, blue: 0.28, alpha: 1)
+            totalAmount.textColor = UIColor(red: 0, green: 0.4, blue: 0.28, alpha: 1)
+        }
+        else { // dark color
+            background.backgroundColor = UIColor(red: 0.64, green: 0.69, blue: 0.76, alpha: 1)
+            tipPercentage.tintColor = UIColor(red: 0.25, green: 0.25, blue: 0.3, alpha: 1)
+            checkAmount.textColor = UIColor(red: 0.25, green: 0.25, blue: 0.3, alpha: 1)
+            tipAmount.textColor = UIColor(red: 0.25, green: 0.25, blue: 0.3, alpha: 1)
+            totalAmount.textColor = UIColor(red: 0.25, green: 0.25, blue: 0.3, alpha: 1)
+        }
     }
     
     // Reset default percentage or else create custom percentage
@@ -63,46 +105,6 @@ class MainViewController: UIViewController {
         }
     }
     
-    // Theme color is saved for after exit
-    func setThemeNumber(index: Int) {
-        themeNumber = index
-        defaults.set(themeNumber, forKey: "themeNumber")
-    }
-    
-    func getThemeNumber() -> Int {
-        return themeNumber
-    }
-    
-    // Change all nodes to match theme selected
-    func matchSelectedTheme() {
-        if (themeNumber == 0) {
-            background.backgroundColor = UIColor(red: 1, green: 0.87, blue: 0.74, alpha: 1)
-            tipPercentage.tintColor = UIColor(red: 1, green: 0.2, blue: 0, alpha: 1)
-            checkAmount.textColor = UIColor(red: 1, green: 0.2, blue: 0, alpha: 1)
-            tipAmount.textColor = UIColor(red: 1, green: 0.2, blue: 0, alpha: 1)
-            totalAmount.textColor = UIColor(red: 1, green: 0.2, blue: 0, alpha: 1)
-        }
-        else if (themeNumber == 1) {
-            background.backgroundColor = UIColor(red: 0.76, green: 0.98, blue: 0.85, alpha: 1)
-            tipPercentage.tintColor = UIColor(red: 0, green: 0.4, blue: 0.28, alpha: 1)
-            checkAmount.textColor = UIColor(red: 0, green: 0.4, blue: 0.28, alpha: 1)
-            tipAmount.textColor = UIColor(red: 0, green: 0.4, blue: 0.28, alpha: 1)
-            totalAmount.textColor = UIColor(red: 0, green: 0.4, blue: 0.28, alpha: 1)
-        }
-        else {
-            background.backgroundColor = UIColor(red: 0.64, green: 0.69, blue: 0.76, alpha: 1)
-            tipPercentage.tintColor = UIColor(red: 0.25, green: 0.25, blue: 0.3, alpha: 1)
-            checkAmount.textColor = UIColor(red: 0.25, green: 0.25, blue: 0.3, alpha: 1)
-            tipAmount.textColor = UIColor(red: 0.25, green: 0.25, blue: 0.3, alpha: 1)
-            totalAmount.textColor = UIColor(red: 0.25, green: 0.25, blue: 0.3, alpha: 1)
-        }
-    }
-    
-    // Event handler for keyboard toggle with tap to main area
-    @IBAction func tapScreen(_ sender: Any) {
-        view.endEditing(true)
-    }
-    
     // Calculate total and tip from amount and change text appropriately
     func calculateValues() {
         if (checkAmount.text == "") {
@@ -118,9 +120,16 @@ class MainViewController: UIViewController {
         }
     }
     
+    /* Event Handlers */
+    
     // Event handler for changing tip and total based on value entered
     @IBAction func changeValues(_ sender: Any) {
         calculateValues()
+    }
+    
+    // Event handler for keyboard toggle with tap to main area
+    @IBAction func tapScreen(_ sender: Any) {
+        view.endEditing(true)
     }
     
     // Event handler for moving to settings view
