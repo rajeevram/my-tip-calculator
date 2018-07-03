@@ -28,6 +28,7 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         matchSelectedTheme()
         calculateValues()
+        checkAmount.becomeFirstResponder()
     }
     
     func setThemeNumber(index: Int) {
@@ -46,7 +47,6 @@ class MainViewController: UIViewController {
     // Event handler for keyboard toggle with tap to main area
     @IBAction func tapScreen(_ sender: Any) {
         view.endEditing(true)
-        //checkAmount.textColor = UIColor.gray
     }
     
     func calculateValues() {
