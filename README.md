@@ -1,7 +1,9 @@
 ## Pre-work - Tiptron
 Tiptron is a tip calculator application for iOS.
+
 Submitted by: Rajeev Ram
-Time spent: 7 hours spent in total (so far)
+
+Time spent: 8 hours spent in total (so far)
 
 ## User Stories
 The following **required** functionality is complete:
@@ -9,26 +11,30 @@ The following **required** functionality is complete:
 
 The following **optional** features are implemented:
 (nothing yet)
-* [X] Settings page to change the default tip percentage; user can enter in a custom tip amount. Custom amount is saved pased exit.
+* [X] Settings page to change the default tip percentage; **futhermore**, user can enter in a custom tip percentage. Custom percentage is saved through exit and restart.
 * [X] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following **additional** features are implemented:
-* [X] Choose from differently three differently colored themes that change the background and text. Choice is saved past exit.
+* [X] Choose from three differently colored themes that change the background and text. Choice is saved through exit and restart.
 * [X] Launch screen when application is opened.
 
 ## Video Walkthrough 
 Here's a GIF walkthrough of implemented user stories:
 (will add soon)
 
+made with [LiceCap](https://www.cockos.com/licecap/)
+to-do: add Youtube Link
 
 ## Notes
-July 1st – This is my first project in iOS/Swift. Things that still confuse me: Optional types, Substring types are apparently different than String types. 
-July 2nd (Session One) – Spent a lot of time figuring out how to pass messages between views safely. Played around with the Delegation and Singleton design patterns but but neither was ideal. In the end, I decided just to pass the main view as an optional view to the secondary view, though this makes the design pretty rigid. The runtime navigation stack is helpful because it allows me to send properties backward.
-July 2nd (Session Two) – Starting to get the hang of things and feel confident. The nuances of optionals – and other Swift quirks – are starting to become clear to me. I've done thorough live-testing, too, and the debugging illuminates many things.
+July 1st – This is my first project in iOS/Swift. Things that still confuse me: Optional types, Substring types are apparently different than String types.
+
+July 2nd (Session One) – Spent a lot of time figuring out how to pass messages between views safely. Played around with the Delegation and Singleton design patterns but but neither was ideal. In the end, I decided just to pass the main view as a property to the secondary view, though this makes the design pretty rigid. The runtime navigation stack is helpful because it allows me to send properties backward.
+
+July 2nd (Session Two) – Starting to get the hang of things and feel confident. The nuances of Optionals – and other Swift quirks – are starting to become clear to me. I've done thorough live-testing, too, and the debugging illuminates many things.
 
 ## License
 
-    Copyright 2018 Rajeev Ram
+    Copyright 2018 © Rajeev Ram
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
