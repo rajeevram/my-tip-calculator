@@ -19,11 +19,11 @@ The following **additional** features are implemented:
 * [X] Launch screen when application is opened.
 
 ## Video Walkthrough 
-Here's a GIF walkthrough of implemented user stories:
-(will add soon)
+Here's a GIF walkthrough of implemented user stories: <img src='https://imgur.com/a/2ajSQUQ' title='Tiptron Video Walkthrough' width='' alt='Tip Calculator Walkthrough' />
 
 made with [LiceCap](https://www.cockos.com/licecap/)
-to-do: add Youtube Link
+
+Here is a more thorough video presentation: (to-do: add Youtube Link)
 
 ## Notes
 July 1st – This is my first project in iOS/Swift. Things that still confuse me: Optional types, Substring types are apparently different than String types.
@@ -31,6 +31,8 @@ July 1st – This is my first project in iOS/Swift. Things that still confuse me
 July 2nd (Session One) – Spent a lot of time figuring out how to pass messages between views safely. Played around with the Delegation and Singleton design patterns but but neither was ideal. In the end, I decided just to pass the main view as a property to the secondary view, though this makes the design pretty rigid. The runtime navigation stack is helpful because it allows me to send properties backward.
 
 July 2nd (Session Two) – Starting to get the hang of things and feel confident. The nuances of Optionals – and other Swift quirks – are starting to become clear to me. I've done thorough live-testing, too, and the debugging illuminates many things.
+
+July 3rd – Played around some more event handlers, and to do a bit more debugging. Comments and documentation are mostly complete.
 
 ## License
 
