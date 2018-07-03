@@ -151,9 +151,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
+                                    <action selector="enterTextField:" destination="iEc-vk-XY1" eventType="editingDidBegin" id="Gjw-4k-KAU"/>
                                     <action selector="pressEnterCustom:" destination="iEc-vk-XY1" eventType="editingDidEndOnExit" id="n47-8V-la0"/>
+                                    <action selector="pressEnterCustom:" destination="iEc-vk-XY1" eventType="editingDidEnd" id="t6g-sB-Jl0"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oKc-Q0-2IC">
@@ -173,6 +175,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.8761452985" blue="0.74613222909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="fVd-SG-PfK" appends="YES" id="MHb-07-N21"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="vHb-yp-CGq"/>
                     <connections>
@@ -183,6 +188,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xba-Za-OnW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fVd-SG-PfK">
+                    <connections>
+                        <action selector="endTextEdit:" destination="iEc-vk-XY1" id="xDE-t9-8iT"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1238" y="149"/>
         </scene>

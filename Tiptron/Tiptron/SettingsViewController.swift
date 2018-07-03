@@ -51,11 +51,24 @@ class SettingsViewController: UIViewController {
         mainViewController?.setThemeNumber(index: themeChoices.selectedSegmentIndex)
         changeTheme()
     }
-
+    
+    // When entering the text field
+    @IBAction func enterTextField(_ sender: Any) {
+        customTipAmount.text! = ""
+        messageLabel.text = ""
+    }
+    
+    // End editing the text field
+    @IBAction func endTextEdit(_ sender: Any) {
+        view.endEditing(true)
+        pressEnterCustom(self)
+    }
+    
     // Enter custom percentage and send message back to main view
     @IBAction func pressEnterCustom(_ sender: Any) {
         let newPercentage = Int(customTipAmount.text!) ?? -1
         if (newPercentage > 0) {
+            mainViewController?.setCustomPercentage(custom: newPercentage)
             mainViewController?.defaults.set(newPercentage, forKey: "customPercent")
             if (newPercentage == 15 || newPercentage == 18 || newPercentage == 20) {
                 messageLabel.text = "Default percentage changed!"
@@ -63,10 +76,11 @@ class SettingsViewController: UIViewController {
             else {
                 messageLabel.text = "Custom percentage replaced!"
             }
-            
         }
         else {
-            messageLabel.text = "Please enter valid integer."
+            if (customTipAmount.text != "") {
+                messageLabel.text = "Please enter valid integer."
+            }
         }
         
     }

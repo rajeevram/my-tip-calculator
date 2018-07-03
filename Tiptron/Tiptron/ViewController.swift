@@ -57,8 +57,8 @@ class MainViewController: UIViewController {
         }
         else {
             percentages[3] = Double(custom) * 0.01
-            tipPercentage.removeSegment(at: 3, animated: false)
-            tipPercentage.insertSegment(withTitle: "\(custom)%", at: 3, animated: false)
+            tipPercentage.removeSegment(at: 3, animated: true)
+            tipPercentage.insertSegment(withTitle: "\(custom)%", at: 3, animated: true)
             tipPercentage.selectedSegmentIndex = 3
         }
     }
