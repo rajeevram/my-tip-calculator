@@ -30,6 +30,7 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Choose from one of three themes
     func changeTheme() {
         if (themeChoices.selectedSegmentIndex == 0) {
             background.backgroundColor = UIColor(red: 1, green: 0.87, blue: 0.74, alpha: 1)
@@ -45,23 +46,29 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    // Send message back to main view for theme change
     @IBAction func newThemeChosen(_ sender: Any) {
-        changeTheme()
         mainViewController?.setThemeNumber(index: themeChoices.selectedSegmentIndex)
+        changeTheme()
     }
 
+    // Enter custom percentage and send message back to main view
     @IBAction func pressEnterCustom(_ sender: Any) {
         let newPercentage = Int(customTipAmount.text!) ?? -1
         if (newPercentage > 0) {
-            mainViewController?.tipPercentage.removeSegment(at: 3, animated: false)
-            mainViewController?.tipPercentage.insertSegment(withTitle: "\(newPercentage)%", at: 3, animated: false)
-            mainViewController?.percentages[3] = Double(newPercentage) * 0.01
-            messageLabel.text = "Custom percentage replaced!"
-            mainViewController?.tipPercentage.selectedSegmentIndex = 3
+            mainViewController?.defaults.set(newPercentage, forKey: "customPercent")
+            if (newPercentage == 15 || newPercentage == 18 || newPercentage == 20) {
+                messageLabel.text = "Default percentage changed!"
+            }
+            else {
+                messageLabel.text = "Custom percentage replaced!"
+            }
+            
         }
         else {
             messageLabel.text = "Please enter valid integer."
         }
         
     }
+    
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB1AC9CB20EB391400D1AC4E /* CoverImage.png in Resources */ = {isa = PBXBuildFile; fileRef = BB1AC9CA20EB391400D1AC4E /* CoverImage.png */; };
 		BB99E16020E9E63200B113B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB99E15F20E9E63200B113B0 /* AppDelegate.swift */; };
 		BB99E16220E9E63200B113B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB99E16120E9E63200B113B0 /* ViewController.swift */; };
 		BB99E16520E9E63200B113B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB99E16320E9E63200B113B0 /* Main.storyboard */; };
@@ -14,7 +15,6 @@
 		BB99E16A20E9E63400B113B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB99E16820E9E63400B113B0 /* LaunchScreen.storyboard */; };
 		BB99E17520E9E63400B113B0 /* TiptronTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB99E17420E9E63400B113B0 /* TiptronTests.swift */; };
 		BB99E18020E9E63400B113B0 /* TiptronUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB99E17F20E9E63400B113B0 /* TiptronUITests.swift */; };
-		BB9CD55F20EB12170076A772 /* CoverImage.png in Resources */ = {isa = PBXBuildFile; fileRef = BB9CD55E20EB12170076A772 /* CoverImage.png */; };
 		BBFBAF4A20EAC0AE002F8F48 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFBAF4920EAC0AE002F8F48 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB1AC9CA20EB391400D1AC4E /* CoverImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CoverImage.png; sourceTree = "<group>"; };
 		BB99E15C20E9E63200B113B0 /* Tiptron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tiptron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB99E15F20E9E63200B113B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB99E16120E9E63200B113B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +50,6 @@
 		BB99E17B20E9E63400B113B0 /* TiptronUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TiptronUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB99E17F20E9E63400B113B0 /* TiptronUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiptronUITests.swift; sourceTree = "<group>"; };
 		BB99E18120E9E63400B113B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB9CD55E20EB12170076A772 /* CoverImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CoverImage.png; path = ../../../../../CoverImage.png; sourceTree = "<group>"; };
 		BBFBAF4920EAC0AE002F8F48 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,7 +107,7 @@
 				BBFBAF4920EAC0AE002F8F48 /* SettingsViewController.swift */,
 				BB99E16620E9E63400B113B0 /* Assets.xcassets */,
 				BB99E16820E9E63400B113B0 /* LaunchScreen.storyboard */,
-				BB9CD55E20EB12170076A772 /* CoverImage.png */,
+				BB1AC9CA20EB391400D1AC4E /* CoverImage.png */,
 				BB99E16B20E9E63400B113B0 /* Info.plist */,
 			);
 			path = Tiptron;
@@ -237,8 +237,8 @@
 			files = (
 				BB99E16A20E9E63400B113B0 /* LaunchScreen.storyboard in Resources */,
 				BB99E16720E9E63400B113B0 /* Assets.xcassets in Resources */,
+				BB1AC9CB20EB391400D1AC4E /* CoverImage.png in Resources */,
 				BB99E16520E9E63200B113B0 /* Main.storyboard in Resources */,
-				BB9CD55F20EB12170076A772 /* CoverImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
