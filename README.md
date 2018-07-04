@@ -3,15 +3,15 @@ Tiptron is a tip calculator application for iOS.
 
 Submitted by: Rajeev Ram
 
-Time spent: 12 hours total (so far) as follows
+Time spent: 13 hours total (so far) as follows
+
+1 hour: setting up project; learning XCode; basic/required functionality completed
 
 2 hours: watching Swift tutorials; learning the language; practice code drills
 
-2 hours: setting up project; learning XCode; basic/required functionality completed
+7 hours: adding additional/optional functionality; research into Swift objects and design patterns; formatting graphics and UI; debugging and testing
 
-6 hours: adding additional/optional functionality; research into Swift objects and design patterns; formatting graphics and UI; debugging and testing
-
-2 hours: comments, documentation, walkthroughs
+3 hours: comments, documentation, walkthroughs
 
 ## User Stories
 The following **required** functionality is complete:
@@ -33,7 +33,9 @@ Here's a GIF walkthrough of implemented user stories:
 
 made with [LiceCap](https://www.cockos.com/licecap/)
 
-Here is a more thorough video presentation: (to-do: add Youtube Link)
+Here is a more comprehensive video presentation: https://youtu.be/OIb5PWBb7M8 
+
+Download the [accompanying presentation slides](https://drive.google.com/file/d/1zJz6Bw3VLUWNzCPGt_Wbdr30ccWGT3Ld/view?usp=sharing) to scroll through while you watch.
 
 ## Notes
 July 1st – This is my first project in iOS/Swift. Things that still confuse me: Optional types, Substring types are apparently different than String types.
@@ -42,7 +44,7 @@ July 2nd (Session One) – Spent a lot of time figuring out how to pass messages
 
 July 2nd (Session Two) – Starting to get the hang of things and feel confident. The nuances of Optionals – and other Swift quirks – are starting to become clear to me. I've done thorough live-testing, too, and the debugging illuminates many things.
 
-July 3rd – Played around some more event handlers, and to do a bit more debugging. Comments and documentation are mostly complete.
+July 3rd – Played around some more event handlers, and to do a bit more debugging. Comments and documentation are mostly complete. Prepared slides and finished video walkthrough.
 
 ## License
 
