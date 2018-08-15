@@ -1,4 +1,4 @@
-## Pre-work - Tiptron
+## Tiptron
 Tiptron is a tip calculator application for iOS. (And my first ever project in Swift!)
 
 Submitted by: Rajeev Ram
