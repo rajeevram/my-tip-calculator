@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BB517744213F002F0042B199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB517743213F002F0042B199 /* Assets.xcassets */; };
 		BB99E16020E9E63200B113B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB99E15F20E9E63200B113B0 /* AppDelegate.swift */; };
-		BB99E16220E9E63200B113B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB99E16120E9E63200B113B0 /* ViewController.swift */; };
+		BB99E16220E9E63200B113B0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB99E16120E9E63200B113B0 /* MainViewController.swift */; };
 		BB99E16520E9E63200B113B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB99E16320E9E63200B113B0 /* Main.storyboard */; };
 		BB99E16A20E9E63400B113B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB99E16820E9E63400B113B0 /* LaunchScreen.storyboard */; };
 		BB99E17520E9E63400B113B0 /* TiptronTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB99E17420E9E63400B113B0 /* TiptronTests.swift */; };
@@ -38,7 +38,7 @@
 		BB517743213F002F0042B199 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB99E15C20E9E63200B113B0 /* Tiptron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tiptron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB99E15F20E9E63200B113B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB99E16120E9E63200B113B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BB99E16120E9E63200B113B0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BB99E16420E9E63200B113B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB99E16920E9E63400B113B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB99E16B20E9E63400B113B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 			children = (
 				BB517743213F002F0042B199 /* Assets.xcassets */,
 				BB99E15F20E9E63200B113B0 /* AppDelegate.swift */,
-				BB99E16120E9E63200B113B0 /* ViewController.swift */,
+				BB99E16120E9E63200B113B0 /* MainViewController.swift */,
 				BB99E16320E9E63200B113B0 /* Main.storyboard */,
 				BBFBAF4920EAC0AE002F8F48 /* SettingsViewController.swift */,
 				BB99E16820E9E63400B113B0 /* LaunchScreen.storyboard */,
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB99E16220E9E63200B113B0 /* ViewController.swift in Sources */,
+				BB99E16220E9E63200B113B0 /* MainViewController.swift in Sources */,
 				BB99E16020E9E63200B113B0 /* AppDelegate.swift in Sources */,
 				BBFBAF4A20EAC0AE002F8F48 /* SettingsViewController.swift in Sources */,
 			);
