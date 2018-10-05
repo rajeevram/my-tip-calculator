@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mcz-YD-CAs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mcz-YD-CAs">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,19 +18,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U50-Is-2zn">
-                                <rect key="frame" x="16" y="260" width="343" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="104-Bk-EvR">
+                                <rect key="frame" x="127.5" y="314" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="TDa-r0-ElZ"/>
+                                    <constraint firstAttribute="height" constant="120" id="rl1-sH-ZkD"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U50-Is-2zn">
+                                <rect key="frame" x="42.5" y="251" width="290" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="eDQ-aA-gQy"/>
+                                    <constraint firstAttribute="height" constant="55" id="nrr-Wi-e8O"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="46"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="launch_screen" translatesAutoresizingMaskIntoConstraints="NO" id="104-Bk-EvR">
-                                <rect key="frame" x="127" y="323" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="104-Bk-EvR" firstAttribute="centerX" secondItem="U50-Is-2zn" secondAttribute="centerX" id="UIV-md-DBb"/>
+                            <constraint firstItem="U50-Is-2zn" firstAttribute="centerY" secondItem="C5v-av-9BQ" secondAttribute="centerY" constant="-55" id="pqb-kn-vn1"/>
+                            <constraint firstItem="104-Bk-EvR" firstAttribute="top" secondItem="U50-Is-2zn" secondAttribute="bottom" constant="8" id="sLl-Mb-bWl"/>
+                            <constraint firstItem="U50-Is-2zn" firstAttribute="centerX" secondItem="C5v-av-9BQ" secondAttribute="centerX" id="uh9-9k-1sY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="I3g-J5-ddW"/>
                     </view>
                 </viewController>
@@ -40,6 +52,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launch_screen" width="60" height="60"/>
+        <image name="launch" width="60" height="60"/>
     </resources>
 </document>

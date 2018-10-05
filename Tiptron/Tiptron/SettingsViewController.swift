@@ -10,21 +10,24 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    /* Properties, Initalizers, Overrides */
+    /*----------Properties and Initalizers----------*/
     
-    // UI Variables
+    // UI, UX Outlet Variables
     @IBOutlet var background: UIView!
     @IBOutlet weak var themeChoices: UISegmentedControl!
     @IBOutlet weak var customTipAmount: UITextField!
     @IBOutlet weak var messageLabel: UILabel!
     
-    // Initial View Controller
-    var mainViewController: MainViewController?
+    // Delegation Variables
+    static var themeNumber : Int = 0
+    var settingsDelegate : SettingsDelegate?
+    
+    /*----------Overrides From Parent----------*/
     
     // Overriden methods from superclass
     override func viewDidLoad() {
         super.viewDidLoad()
-        themeChoices.selectedSegmentIndex = (mainViewController?.getThemeNumber())!
+        themeChoices.selectedSegmentIndex = SettingsViewController.themeNumber
         changeTheme()
     }
 
@@ -54,7 +57,7 @@ class SettingsViewController: UIViewController {
     
     // Send message back to main view for theme change
     @IBAction func newThemeChosen(_ sender: Any) {
-        mainViewController?.setThemeNumber(index: themeChoices.selectedSegmentIndex)
+        settingsDelegate?.changeOverallTheme(selected: themeChoices.selectedSegmentIndex)
         changeTheme()
     }
     
@@ -74,8 +77,7 @@ class SettingsViewController: UIViewController {
     @IBAction func pressEnterCustom(_ sender: Any) {
         let newPercentage = Int(customTipAmount.text!) ?? -1
         if (newPercentage > 0) { // valid number
-            mainViewController?.setCustomPercentage(custom: newPercentage)
-            mainViewController?.defaults.set(newPercentage, forKey: "customPercent")
+            settingsDelegate?.changePercentageBar(percentage: newPercentage)
             if (newPercentage == 15 || newPercentage == 18 || newPercentage == 20) {
                 messageLabel.text = "Default percentage changed!"
             }
@@ -91,4 +93,9 @@ class SettingsViewController: UIViewController {
         
     }
     
+}
+
+protocol SettingsDelegate : class {
+    func changePercentageBar(percentage : Int)
+    func changeOverallTheme(selected : Int)
 }

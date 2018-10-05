@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  Tiptron
 //
 //  Created by Rajeev Ram on 7/1/18.
@@ -8,25 +8,23 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, SettingsDelegate {
 
-    /* Properties, Initalizers, Overrides */
+    /*----------Properties and Initalizers----------*/
     
-    // UI Variables
+    // UI, UX Outlet Variables
     @IBOutlet weak var checkAmount: UITextField!
     @IBOutlet weak var tipAmount: UILabel!
     @IBOutlet weak var totalAmount: UILabel!
     @IBOutlet weak var tipPercentage: UISegmentedControl!
     @IBOutlet var background: UIView!
     
-    // Settings Variables
-    var themeNumber = -1
+    // Settings and Storage Variables
+    static var themeNumber = -1
     var percentages = [0.15,0.18,0.2,0.22]
-    
-    // Storage Variables
     let defaults = UserDefaults.standard
     
-    // Overriden methods from superclass
+    /*----------Overrides From Parent----------*/
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -35,11 +33,13 @@ class MainViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    /*----------View Setup Methods----------*/
+    
     // Calibrate the proper theme and tip value from saved value, if necessary
     override func viewWillAppear(_ animated: Bool) {
-        // Ensure theme is correct
-        if (themeNumber == -1) {
-            themeNumber = defaults.integer(forKey: "themeNumber")
+        // Ensure saved theme loads first
+        if (MainViewController.themeNumber == -1) {
+            setThemeNumber(index: defaults.integer(forKey: "themeNumber"))
         }
         matchSelectedTheme()
         // Ensure default percentage is correct
@@ -49,20 +49,22 @@ class MainViewController: UIViewController {
         checkAmount.becomeFirstResponder()
     }
     
-    /* Class Specific Methods */
+    /*----------Instance and Helper Methods----------*/
     
     // Theme color is saved for after exit
     func setThemeNumber(index: Int) {
-        themeNumber = index
-        defaults.set(themeNumber, forKey: "themeNumber")
+        MainViewController.themeNumber = index
+        SettingsViewController.themeNumber = index
+        defaults.set(index, forKey: "themeNumber")
     }
     
     func getThemeNumber() -> Int {
-        return themeNumber
+        return MainViewController.themeNumber
     }
     
-    // Change all nodes to match theme selected
+    // Change all elements to match theme selected
     func matchSelectedTheme() {
+        let themeNumber = MainViewController.themeNumber
         if (themeNumber == 0) { // warm color
             background.backgroundColor = UIColor(red: 1, green: 0.87, blue: 0.74, alpha: 1)
             tipPercentage.tintColor = UIColor(red: 1, green: 0.2, blue: 0, alpha: 1)
@@ -120,7 +122,7 @@ class MainViewController: UIViewController {
         }
     }
     
-    /* Event Handlers */
+    /*----------Event Handlers----------*/
     
     // Event handler for changing tip and total based on value entered
     @IBAction func changeValues(_ sender: Any) {
@@ -135,8 +137,17 @@ class MainViewController: UIViewController {
     // Event handler for moving to settings view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let settingsView = segue.destination as? SettingsViewController
-        settingsView?.mainViewController = self
+        settingsView?.settingsDelegate = self
     }
     
+    /*----------Delegation Protocol----------*/
+    func changePercentageBar(percentage: Int) {
+        setCustomPercentage(custom : percentage)
+        defaults.set(percentage, forKey: "customPercent")
+    }
+    
+    func changeOverallTheme(selected: Int) {
+        setThemeNumber(index : selected)
+    }
 }
 

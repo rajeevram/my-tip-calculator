@@ -33,13 +33,13 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "launch_screen.png",
+      "filename" : "appicon@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "launch_screen-1.png",
+      "filename" : "appicon@3x.png",
       "scale" : "3x"
     },
     {
