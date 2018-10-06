@@ -35,7 +35,7 @@ class SettingsViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    /* Class Methods */
+    /*----------Instance and Helper Methods----------*/
     
     // Choose from one of three themes
     func changeTheme() {
@@ -53,7 +53,7 @@ class SettingsViewController: UIViewController {
         }
     }
     
-    /* Event Handlers */
+    /*----------Event Handlers----------*/
     
     // Send message back to main view for theme change
     @IBAction func newThemeChosen(_ sender: Any) {
@@ -95,6 +95,10 @@ class SettingsViewController: UIViewController {
     
 }
 
+/**
+ * This delegation protocol is used to passs the changed settings
+ * to the MainViewController from the SettingsViewController
+ */
 protocol SettingsDelegate : class {
     func changePercentageBar(percentage : Int)
     func changeOverallTheme(selected : Int)

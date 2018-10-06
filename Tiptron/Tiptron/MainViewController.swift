@@ -43,7 +43,13 @@ class MainViewController: UIViewController, SettingsDelegate {
         }
         matchSelectedTheme()
         // Ensure default percentage is correct
-        setCustomPercentage(custom: defaults.integer(forKey: "customPercent"))
+        let percentages = defaults.integer(forKey: "customPercent")
+        if (percentages == 0) { // build app for very first time
+            defaults.set(15, forKey: "customPercent")
+        }
+        else { // restart or settings changed
+            setCustomPercentage(custom: defaults.integer(forKey: "customPercent"))
+        }
         calculateValues()
         // Make number pad show up automatically
         checkAmount.becomeFirstResponder()
@@ -101,8 +107,8 @@ class MainViewController: UIViewController, SettingsDelegate {
         }
         else {
             percentages[3] = Double(custom) * 0.01
-            tipPercentage.removeSegment(at: 3, animated: true)
-            tipPercentage.insertSegment(withTitle: "\(custom)%", at: 3, animated: true)
+            tipPercentage.removeSegment(at: 3, animated: false)
+            tipPercentage.insertSegment(withTitle: "\(custom)%", at: 3, animated: false)
             tipPercentage.selectedSegmentIndex = 3
         }
     }
@@ -142,12 +148,12 @@ class MainViewController: UIViewController, SettingsDelegate {
     
     /*----------Delegation Protocol----------*/
     func changePercentageBar(percentage: Int) {
-        setCustomPercentage(custom : percentage)
         defaults.set(percentage, forKey: "customPercent")
     }
     
     func changeOverallTheme(selected: Int) {
         setThemeNumber(index : selected)
     }
+    
 }
 
