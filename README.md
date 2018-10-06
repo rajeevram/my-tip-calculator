@@ -16,7 +16,7 @@ Submitted by: Rajeev Ram
 ## Video Walkthrough 
 Here's a GIF walkthrough of implemented user stories: 
 
-<img src='https://imgur.com/i0guE4z.gif' title='Tiptron Video Walkthrough' width='' alt='Tip Calculator Walkthrough' />
+<img src='Tiptron.GIF' title='Tiptron Animated Walkthrough' width='' alt='Tip Calculator Walkthrough' />
 
 Here is a more comprehensive video presentation: https://youtu.be/OIb5PWBb7M8 
 
