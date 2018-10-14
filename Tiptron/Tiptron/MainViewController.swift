@@ -147,6 +147,7 @@ class MainViewController: UIViewController, SettingsDelegate {
     }
     
     /*----------Delegation Protocol----------*/
+    
     func changePercentageBar(percentage: Int) {
         defaults.set(percentage, forKey: "customPercent")
     }

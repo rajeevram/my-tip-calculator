@@ -1,6 +1,5 @@
 ## Tiptron
 Tiptron is a tip calculator application for iOS – and my first ever project in Swift!
-Submitted by: Rajeev Ram
 
 ## User Stories
 
@@ -18,13 +17,13 @@ Here's a GIF walkthrough of implemented user stories:
 
 <img src='Tiptron.GIF' title='Tiptron Animated Walkthrough' width='' alt='Tip Calculator Walkthrough' />
 
-Here is a more comprehensive video presentation: https://youtu.be/OIb5PWBb7M8 
+Here is a more comprehensive video presentation: https://youtu.be/z52OEHAZmPo
 
 Download the [accompanying presentation slides](https://drive.google.com/file/d/1zJz6Bw3VLUWNzCPGt_Wbdr30ccWGT3Ld/view?usp=sharing) to scroll through while you watch.
 
 ## Notes
 
-This project has been significantly updated at of October 2018. There will be a new walkthrough GIF, video, and presentation slides coming soon.
+This project has been significantly updated at of October 2018. This includes an updated slide deck, walkthrough GIF, and video presentation.
 
 ## License
 

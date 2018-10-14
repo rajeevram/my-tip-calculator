@@ -140,7 +140,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1126" y="119"/>
+            <point key="canvasLocation" x="1050" y="118"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="Nh7-WM-gCy">
@@ -251,7 +251,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1993" y="120"/>
+            <point key="canvasLocation" x="1908" y="119"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fMB-9M-28E">
